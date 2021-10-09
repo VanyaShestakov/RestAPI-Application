@@ -21,6 +21,7 @@ public class MainController {
 
     @PostMapping("/patients")
     public void addPatient(@RequestBody Patient patient) {
+        System.out.println(patient);
         patientService.savePatient(patient);
     }
 

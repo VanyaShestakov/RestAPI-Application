@@ -27,7 +27,8 @@ public class Patient {
     private String diagnosis;
 
     @Column(name = "sex")
-    private String sex;
+    @Convert(converter = SexAttributeConverter.class)
+    private Sex sex;
 
     public Patient() {
     }
@@ -80,11 +81,24 @@ public class Patient {
         this.diagnosis = diagnosis;
     }
 
-    public String getSex() {
+    public Sex getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(Sex sex) {
         this.sex = sex;
+    }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", city='" + city + '\'' +
+                ", diagnosis='" + diagnosis + '\'' +
+                ", sex=" + sex +
+                '}';
     }
 }
