@@ -21,5 +21,4 @@ public interface PatientDAO {
 
     public List<Patient> getBySex(String sex);
 
-
 }

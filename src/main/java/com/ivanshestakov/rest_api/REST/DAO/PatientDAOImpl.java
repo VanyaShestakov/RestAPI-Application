@@ -43,6 +43,11 @@ public class PatientDAOImpl implements PatientDAO{
         entityManager.unwrap(Session.class).persist(patient);
     }
 
+    public void saveAll(List<Patient> patients) {
+        Session session = entityManager.unwrap(Session.class);
+        patients.forEach(session::persist);
+    }
+
     public void update(Patient patient) {
         entityManager.unwrap(Session.class).update(patient);
     }

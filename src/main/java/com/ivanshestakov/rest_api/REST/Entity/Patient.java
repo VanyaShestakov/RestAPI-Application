@@ -1,6 +1,10 @@
 package com.ivanshestakov.rest_api.REST.Entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "patients")
@@ -11,21 +15,27 @@ public class Patient {
     @Column(name = "id")
     private int id;
 
+    @NotEmpty
     @Column(name = "name")
     private String name;
 
+    @NotEmpty
     @Column(name = "surname")
     private String surname;
 
+    @Min(value = -1)
     @Column(name = "age")
     private int age;
 
+    @NotEmpty
     @Column(name = "city")
     private String city;
 
+    @NotEmpty
     @Column(name = "diagnosis")
     private String diagnosis;
 
+    @NotNull
     @Column(name = "sex")
     @Convert(converter = SexAttributeConverter.class)
     private Sex sex;
@@ -101,4 +111,5 @@ public class Patient {
                 ", sex=" + sex +
                 '}';
     }
+
 }
