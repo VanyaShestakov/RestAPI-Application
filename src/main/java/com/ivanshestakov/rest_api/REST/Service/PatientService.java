@@ -13,4 +13,8 @@ public interface PatientService {
     public List<Patient> getPatientsBySex(String sex);
 
     public void savePatient(Patient patient);
+
+    public void updatePatient(Patient patient);
+
+    public void deletePatientWithId(int id);
 }

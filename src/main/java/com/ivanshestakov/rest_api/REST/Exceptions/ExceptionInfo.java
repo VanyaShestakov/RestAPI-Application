@@ -1,10 +1,10 @@
 package com.ivanshestakov.rest_api.REST.Exceptions;
 
-public class IncorrectJSONData {
+public class ExceptionInfo {
     private String status;
     private String info;
 
-    public IncorrectJSONData(String info, String status) {
+    public ExceptionInfo(String info, String status) {
         this.info = info;
         this.status = status;
     }

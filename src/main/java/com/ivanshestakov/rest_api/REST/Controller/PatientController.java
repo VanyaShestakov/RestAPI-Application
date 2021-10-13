@@ -35,6 +35,19 @@ public class PatientController {
         patientService.savePatient(patient);
     }
 
+    @PutMapping("/patients")
+    public void updatePatient(@Valid @RequestBody Patient patient, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            throw new IncorrectJSONException("JSON object is not valid");
+        }
+        patientService.updatePatient(patient);
+    }
+
+    @DeleteMapping("/patients/id={id}")
+    public void deletePatient(@PathVariable int id) {
+        patientService.deletePatientWithId(id);
+    }
+
     @GetMapping("/patients/id={id}")
     public Patient getPatientById(@PathVariable int id) {
         return patientService.getPatient(id);

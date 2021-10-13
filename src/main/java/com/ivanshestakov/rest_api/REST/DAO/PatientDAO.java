@@ -13,12 +13,12 @@ public interface PatientDAO {
 
     public void delete(Patient patient);
 
-    public void deleteWithId(int id);
-
     public void save(Patient patient);
 
     public void update(Patient patient);
 
     public List<Patient> getBySex(String sex);
+
+    public boolean contains(Patient patient);
 
 }

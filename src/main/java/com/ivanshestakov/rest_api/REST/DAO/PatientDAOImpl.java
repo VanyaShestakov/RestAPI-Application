@@ -34,11 +34,6 @@ public class PatientDAOImpl implements PatientDAO{
         entityManager.unwrap(Session.class).delete(patient);
     }
 
-    public void deleteWithId(int id) {
-        Session session = entityManager.unwrap(Session.class);
-        session.delete(session.get(Patient.class, id));
-    }
-
     public void save(Patient patient) {
         entityManager.unwrap(Session.class).persist(patient);
     }
@@ -51,6 +46,11 @@ public class PatientDAOImpl implements PatientDAO{
     public void update(Patient patient) {
         entityManager.unwrap(Session.class).update(patient);
     }
+
+    public boolean contains(Patient patient) {
+        return entityManager.unwrap(Session.class).contains(patient);
+    }
+
 
 
 

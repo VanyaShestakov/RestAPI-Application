@@ -2,6 +2,7 @@ package com.ivanshestakov.rest_api.REST.Service;
 
 import com.ivanshestakov.rest_api.REST.DAO.PatientDAO;
 import com.ivanshestakov.rest_api.REST.Entity.Patient;
+import com.ivanshestakov.rest_api.REST.Exceptions.NoSuchPatientException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,6 +38,22 @@ public class PatientServiceImpl implements PatientService{
     @Transactional
     public void savePatient(Patient patient) {
         patientDAO.save(patient);
+    }
+
+    @Override
+    @Transactional
+    public void updatePatient(Patient patient) {
+        patientDAO.update(patient);
+    }
+
+    @Override
+    @Transactional
+    public void deletePatientWithId(int id) {
+        Patient removablePatient = patientDAO.get(id);
+        if (!patientDAO.contains(removablePatient)) {
+            throw new NoSuchPatientException("Patient with id=" + id + " not found");
+        }
+        patientDAO.delete(removablePatient);
     }
 
 }
