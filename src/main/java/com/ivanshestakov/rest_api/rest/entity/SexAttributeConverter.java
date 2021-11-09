@@ -1,4 +1,4 @@
-package com.ivanshestakov.rest_api.REST.Entity;
+package com.ivanshestakov.rest_api.rest.entity;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

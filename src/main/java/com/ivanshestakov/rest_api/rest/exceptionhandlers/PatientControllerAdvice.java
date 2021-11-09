@@ -1,8 +1,8 @@
-package com.ivanshestakov.rest_api.REST.ExceptionHandlers;
+package com.ivanshestakov.rest_api.rest.exceptionhandlers;
 
-import com.ivanshestakov.rest_api.REST.Exceptions.ExceptionInfo;
-import com.ivanshestakov.rest_api.REST.Exceptions.IncorrectJSONException;
-import com.ivanshestakov.rest_api.REST.Exceptions.NoSuchPatientException;
+import com.ivanshestakov.rest_api.rest.exceptions.ExceptionInfo;
+import com.ivanshestakov.rest_api.rest.exceptions.IncorrectJSONException;
+import com.ivanshestakov.rest_api.rest.exceptions.NoSuchPatientException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

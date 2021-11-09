@@ -1,8 +1,7 @@
-package com.ivanshestakov.rest_api.REST.Entity;
+package com.ivanshestakov.rest_api.rest.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 

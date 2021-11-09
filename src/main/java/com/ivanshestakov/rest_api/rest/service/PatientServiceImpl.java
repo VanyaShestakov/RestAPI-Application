@@ -1,14 +1,13 @@
-package com.ivanshestakov.rest_api.REST.Service;
+package com.ivanshestakov.rest_api.rest.service;
 
-import com.ivanshestakov.rest_api.REST.DAO.PatientDAO;
-import com.ivanshestakov.rest_api.REST.Entity.Patient;
-import com.ivanshestakov.rest_api.REST.Exceptions.NoSuchPatientException;
+import com.ivanshestakov.rest_api.rest.repository.PatientDAO;
+import com.ivanshestakov.rest_api.rest.entity.Patient;
+import com.ivanshestakov.rest_api.rest.exceptions.NoSuchPatientException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class PatientServiceImpl implements PatientService{

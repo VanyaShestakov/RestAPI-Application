@@ -1,11 +1,9 @@
-package com.ivanshestakov.rest_api.REST.DAO;
+package com.ivanshestakov.rest_api.rest.repository;
 
-import com.ivanshestakov.rest_api.REST.Entity.Patient;
-import com.ivanshestakov.rest_api.REST.Entity.Sex;
+import com.ivanshestakov.rest_api.rest.entity.Patient;
+import com.ivanshestakov.rest_api.rest.entity.Sex;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 

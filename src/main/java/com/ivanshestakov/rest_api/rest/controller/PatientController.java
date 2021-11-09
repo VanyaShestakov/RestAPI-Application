@@ -1,10 +1,10 @@
-package com.ivanshestakov.rest_api.REST.Controller;
+package com.ivanshestakov.rest_api.rest.controller;
 
-import com.ivanshestakov.rest_api.REST.DAO.PatientRepository;
-import com.ivanshestakov.rest_api.REST.Entity.Patient;
-import com.ivanshestakov.rest_api.REST.Entity.Sex;
-import com.ivanshestakov.rest_api.REST.Exceptions.IncorrectJSONException;
-import com.ivanshestakov.rest_api.REST.Service.PatientService;
+import com.ivanshestakov.rest_api.rest.repository.PatientRepository;
+import com.ivanshestakov.rest_api.rest.entity.Patient;
+import com.ivanshestakov.rest_api.rest.entity.Sex;
+import com.ivanshestakov.rest_api.rest.exceptions.IncorrectJSONException;
+import com.ivanshestakov.rest_api.rest.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -58,9 +58,4 @@ public class PatientController {
     public List<Patient> getPatientsBySex(@PathVariable Sex sex) {
         return patientService.getPatientsBySex(sex.name());
     }
-
-    private void checkPatient(Patient patient) {
-       // if ()
-    }
-
 }

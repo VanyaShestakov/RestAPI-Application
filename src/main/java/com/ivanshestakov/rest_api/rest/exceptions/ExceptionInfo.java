@@ -1,4 +1,4 @@
-package com.ivanshestakov.rest_api.REST.Exceptions;
+package com.ivanshestakov.rest_api.rest.exceptions;
 
 public class ExceptionInfo {
     private String status;

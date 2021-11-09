@@ -1,13 +1,12 @@
-package com.ivanshestakov.rest_api.REST.DAO;
+package com.ivanshestakov.rest_api.rest.repository;
 
 
-import com.ivanshestakov.rest_api.REST.Entity.Patient;
+import com.ivanshestakov.rest_api.rest.entity.Patient;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.swing.text.html.parser.Entity;
 import java.util.List;
 
 @Repository
@@ -50,9 +49,4 @@ public class PatientDAOImpl implements PatientDAO{
     public boolean contains(Patient patient) {
         return entityManager.unwrap(Session.class).contains(patient);
     }
-
-
-
-
-
 }

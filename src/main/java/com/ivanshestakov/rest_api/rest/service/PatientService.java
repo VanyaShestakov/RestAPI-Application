@@ -1,6 +1,6 @@
-package com.ivanshestakov.rest_api.REST.Service;
+package com.ivanshestakov.rest_api.rest.service;
 
-import com.ivanshestakov.rest_api.REST.Entity.Patient;
+import com.ivanshestakov.rest_api.rest.entity.Patient;
 
 import java.util.List;
 

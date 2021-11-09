@@ -1,7 +1,6 @@
-package com.ivanshestakov.rest_api.REST.DAO;
+package com.ivanshestakov.rest_api.rest.repository;
 
-import com.ivanshestakov.rest_api.REST.Entity.Patient;
-import org.hibernate.Session;
+import com.ivanshestakov.rest_api.rest.entity.Patient;
 
 import java.util.List;
 

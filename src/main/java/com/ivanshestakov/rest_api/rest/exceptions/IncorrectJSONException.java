@@ -1,4 +1,4 @@
-package com.ivanshestakov.rest_api.REST.Exceptions;
+package com.ivanshestakov.rest_api.rest.exceptions;
 
 public class IncorrectJSONException extends RuntimeException {
     public IncorrectJSONException() {
