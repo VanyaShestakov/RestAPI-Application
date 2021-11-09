@@ -3,6 +3,7 @@ package com.ivanshestakov.rest_api.rest.repository;
 import com.ivanshestakov.rest_api.rest.entity.Patient;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PatientDAO {
 

@@ -2,12 +2,14 @@ package com.ivanshestakov.rest_api.rest.repository;
 
 
 import com.ivanshestakov.rest_api.rest.entity.Patient;
+import com.ivanshestakov.rest_api.rest.exceptions.NoSuchPatientException;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class PatientDAOImpl implements PatientDAO{
@@ -21,7 +23,11 @@ public class PatientDAOImpl implements PatientDAO{
     }
 
     public Patient get(int id) {
-        return entityManager.unwrap(Session.class).get(Patient.class, id);
+        Session session = entityManager.unwrap(Session.class);
+        Optional<Patient> optionalPatient = Optional.ofNullable(session.get(Patient.class, id));
+        return optionalPatient.orElseThrow(() -> {
+            throw new NoSuchPatientException("No such patient with id=" + id);
+        });
     }
 
     public List<Patient> getBySex(String sex) {

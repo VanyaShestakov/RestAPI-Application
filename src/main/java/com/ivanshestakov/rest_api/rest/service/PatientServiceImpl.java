@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PatientServiceImpl implements PatientService{
@@ -48,11 +49,8 @@ public class PatientServiceImpl implements PatientService{
     @Override
     @Transactional
     public void deletePatientWithId(int id) {
-        Patient removablePatient = patientDAO.get(id);
-        if (!patientDAO.contains(removablePatient)) {
-            throw new NoSuchPatientException("Patient with id=" + id + " not found");
-        }
-        patientDAO.delete(removablePatient);
+        Patient patient = patientDAO.get(id);
+        patientDAO.delete(patient);
     }
 
 }
