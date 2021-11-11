@@ -1,6 +1,5 @@
 package com.ivanshestakov.rest_api.rest.controller;
 
-import com.ivanshestakov.rest_api.rest.repository.PatientRepository;
 import com.ivanshestakov.rest_api.rest.entity.Patient;
 import com.ivanshestakov.rest_api.rest.entity.Sex;
 import com.ivanshestakov.rest_api.rest.exceptions.IncorrectJSONException;
@@ -19,16 +18,13 @@ public class PatientController {
     @Autowired
     private PatientService patientService;
 
-    @Autowired
-    private PatientRepository repository;
-
-    @GetMapping("/patients")
-    public List<Patient> getAllPatients() {
+    @GetMapping({"/patients"})
+    public List<Patient> getPatients() {
         return patientService.getPatients();
     }
 
     @PostMapping("/patients")
-    public void addPatient(@Valid @RequestBody Patient patient, BindingResult bindingResult) {
+    public void postPatient(@Valid @RequestBody Patient patient, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new IncorrectJSONException("JSON object is not valid");
         }
@@ -36,7 +32,7 @@ public class PatientController {
     }
 
     @PutMapping("/patients")
-    public void updatePatient(@Valid @RequestBody Patient patient, BindingResult bindingResult) {
+    public void putPatient(@Valid @RequestBody Patient patient, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new IncorrectJSONException("JSON object is not valid");
         }

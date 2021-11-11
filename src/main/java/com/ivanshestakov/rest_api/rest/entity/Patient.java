@@ -110,5 +110,4 @@ public class Patient {
                 ", sex=" + sex +
                 '}';
     }
-
 }
