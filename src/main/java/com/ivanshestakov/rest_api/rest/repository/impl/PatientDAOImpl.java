@@ -1,8 +1,9 @@
-package com.ivanshestakov.rest_api.rest.repository;
+package com.ivanshestakov.rest_api.rest.repository.impl;
 
 
 import com.ivanshestakov.rest_api.rest.entity.Patient;
 import com.ivanshestakov.rest_api.rest.exceptions.NoSuchPatientException;
+import com.ivanshestakov.rest_api.rest.repository.PatientRepository;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class PatientDAOImpl implements PatientDAO{
+public class PatientDAOImpl implements PatientRepository {
 
     @Autowired
     private EntityManager entityManager;

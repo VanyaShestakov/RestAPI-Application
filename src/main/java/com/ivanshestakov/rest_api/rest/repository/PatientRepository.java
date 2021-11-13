@@ -5,7 +5,7 @@ import com.ivanshestakov.rest_api.rest.entity.Patient;
 import java.util.List;
 import java.util.Optional;
 
-public interface PatientDAO {
+public interface PatientRepository {
 
     public List<Patient> getAll();
 
