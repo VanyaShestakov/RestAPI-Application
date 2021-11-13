@@ -1,8 +1,13 @@
 package com.ivanshestakov.rest_api.rest.repository;
 
 import com.ivanshestakov.rest_api.rest.entity.Role;
+import com.ivanshestakov.rest_api.rest.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository  extends JpaRepository<Role, Integer> {
+import java.util.Optional;
+
+public interface UserRepository  extends JpaRepository<User, Integer> {
+
+    Optional<User> findByUsername(String username);
 
 }
