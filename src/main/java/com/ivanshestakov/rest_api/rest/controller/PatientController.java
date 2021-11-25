@@ -1,7 +1,7 @@
 package com.ivanshestakov.rest_api.rest.controller;
 
 import com.ivanshestakov.rest_api.rest.entity.Patient;
-import com.ivanshestakov.rest_api.rest.entity.Sex;
+import com.ivanshestakov.rest_api.rest.entity.tool.Sex;
 import com.ivanshestakov.rest_api.rest.exceptions.IncorrectJSONException;
 import com.ivanshestakov.rest_api.rest.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
