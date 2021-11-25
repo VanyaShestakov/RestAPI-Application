@@ -1,4 +1,6 @@
-package com.ivanshestakov.rest_api.rest.entity;
+package com.ivanshestakov.rest_api.rest.entity.tool;
+
+import com.ivanshestakov.rest_api.rest.entity.tool.Sex;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

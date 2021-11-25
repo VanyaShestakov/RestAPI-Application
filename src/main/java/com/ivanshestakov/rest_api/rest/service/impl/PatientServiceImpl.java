@@ -1,20 +1,19 @@
-package com.ivanshestakov.rest_api.rest.service;
+package com.ivanshestakov.rest_api.rest.service.impl;
 
-import com.ivanshestakov.rest_api.rest.repository.PatientDAO;
 import com.ivanshestakov.rest_api.rest.entity.Patient;
-import com.ivanshestakov.rest_api.rest.exceptions.NoSuchPatientException;
+import com.ivanshestakov.rest_api.rest.repository.PatientRepository;
+import com.ivanshestakov.rest_api.rest.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class PatientServiceImpl implements PatientService{
+public class PatientServiceImpl implements PatientService {
 
     @Autowired
-    private PatientDAO patientDAO;
+    private PatientRepository patientDAO;
 
     @Override
     @Transactional

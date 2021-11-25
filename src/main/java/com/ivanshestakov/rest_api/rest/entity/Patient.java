@@ -1,5 +1,8 @@
 package com.ivanshestakov.rest_api.rest.entity;
 
+import com.ivanshestakov.rest_api.rest.entity.tool.Sex;
+import com.ivanshestakov.rest_api.rest.entity.tool.SexAttributeConverter;
+
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
